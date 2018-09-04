@@ -16,7 +16,7 @@ public class Klinik {
         return idKlinik;
     }
 
-    public void setIdKlinik(String idKlinik) { //membuat method void bernama setIdKlinik dengan parameter variabel nama bertipe data String
+    public void setIdKlinik(String idKlinik) { //membuat method void bernama setIdKlinik dengan parameter variabel idKlinik bertipe data String
         this.idKlinik = idKlinik;
     }
 
