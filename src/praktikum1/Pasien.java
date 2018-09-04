@@ -59,8 +59,10 @@ public class Pasien {
         return tanggalLahir;
     }
 
-    public void setTanggalLahir(int tanggalLahir) { //membuat method void bernama setTanggalLahir dengan parameter variabel tanggalLahir bertipe data integer
+    public void setTanggalLahir(int tanggalLahir) throws NumberFormatException { //membuat method void bernama setTanggalLahir dengan parameter variabel tanggalLahir bertipe data integer
+        if(tanggalLahir>0 && tanggalLahir<31)
         this.tanggalLahir = tanggalLahir;
+        else{  throw new NumberFormatException("Tanggal Lahir tidak vaild");}
     }
 
     public int getBulanLahir() {  //membuat method bernama getBulanLahir yang akan mereturn variabel bertipe data integer
