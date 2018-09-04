@@ -60,7 +60,7 @@ public class Pasien {
     }
 
     public void setTanggalLahir(int tanggalLahir) throws NumberFormatException { //membuat method void bernama setTanggalLahir dengan parameter variabel tanggalLahir bertipe data integer
-        if(tanggalLahir>0 && tanggalLahir<31)
+        if(tanggalLahir>0 && tanggalLahir<32)
         this.tanggalLahir = tanggalLahir;
         else{  throw new NumberFormatException("Tanggal Lahir tidak vaild");}
     }
@@ -69,16 +69,20 @@ public class Pasien {
         return bulanLahir;
     }
 
-    public void setBulanLahir(int bulanLahir) { //membuat method void bernama setBulanLahir dengan parameter variabel bulanLahir bertipe data integer
+    public void setBulanLahir(int bulanLahir) throws NumberFormatException { //membuat method void bernama setBulanLahir dengan parameter variabel bulanLahir bertipe data integer
+       if(bulanLahir>0 && bulanLahir<13)
         this.bulanLahir = bulanLahir;
+       else{  throw new NumberFormatException("Bulan Lahir tidak vaild");}
     }
 
     public int getTahunLahir() {  //membuat method bernama getTahunLahir yang akan mereturn variabel bertipe data integer
         return tahunLahir;
     }
 
-    public void setTahunLahir(int tahunLahir) { //membuat method void bernama setTahunlahir dengan parameter variabel tahunLahir bertipe data integer
+    public void setTahunLahir(int tahunLahir)  throws NumberFormatException { //membuat method void bernama setTahunlahir dengan parameter variabel tahunLahir bertipe data integer
+         if(tahunLahir>0 )
         this.tahunLahir = tahunLahir;
+         else{  throw new NumberFormatException("Tahun Lahir tidak vaild");}
     }
     
 }
