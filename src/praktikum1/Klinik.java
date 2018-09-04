@@ -10,21 +10,21 @@ package praktikum1;
  * @author RamaEka
  */
 public class Klinik {
-      private String idKlinik, nama;
+      private String idKlinik, nama; //deklarasi variabel bertipe data String bersifat private
 
-    public String getIdKlinik() {
+    public String getIdKlinik() { //membuat method bernama getIdKlinik yang akan mereturn variabel bertipe data String
         return idKlinik;
     }
 
-    public void setIdKlinik(String idKlinik) {
+    public void setIdKlinik(String idKlinik) { //membuat method void bernama setIdKlinik dengan parameter variabel nama bertipe data String
         this.idKlinik = idKlinik;
     }
 
-    public String getNama() {
+    public String getNama() { //membuat method bernama getNama yang akan mereturn variabel bertipe data String
         return nama;
     }
 
-    public void setNama(String nama) {
+    public void setNama(String nama) { //membuat method void bernama setNama dengan parameter variabel nama bertipe data String
         this.nama = nama;
     }
 }
