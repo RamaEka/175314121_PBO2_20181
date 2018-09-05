@@ -37,7 +37,7 @@ public class DaftarAntrianDialog extends JDialog{
         this.add(namaLabel);
         
         namaText= new JTextField();
-        namaText.setBounds(90, 50, 100, 20);
+        namaText.setBounds(100, 50, 100, 20);
         this.add(namaText);
         
         namaLabel = new JLabel("Nama");
@@ -45,15 +45,15 @@ public class DaftarAntrianDialog extends JDialog{
         this.add(namaLabel);
         
         namaText= new JTextField();
-        namaText.setBounds(90, 80, 100, 20);
+        namaText.setBounds(100, 80, 100, 20);
         this.add(namaText);
         
          namaLabel = new JLabel("Alamat");
-        namaLabel.setBounds(50, 80, 50, 20);
+        namaLabel.setBounds(50, 110, 50, 20);
         this.add(namaLabel);
         
         namaText= new JTextField();
-        namaText.setBounds(90, 80, 100, 20);
+        namaText.setBounds(100, 110, 100, 20);
         this.add(namaText);
     }
     public static void main(String[] args) {
