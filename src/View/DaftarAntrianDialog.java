@@ -33,33 +33,36 @@ public class DaftarAntrianDialog extends JDialog{
         this.setLayout(null);
         
         namaLabel = new JLabel("NoRM");
-        namaLabel.setBounds(50, 50, 50, 20);
+        namaLabel.setBounds(200, 70, 50, 20);
         this.add(namaLabel);
         
         namaText= new JTextField();
-        namaText.setBounds(100, 50, 100, 20);
+        namaText.setBounds(250, 70, 100, 20);
         this.add(namaText);
         
         namaLabel = new JLabel("Nama");
-        namaLabel.setBounds(50, 80, 50, 20);
+        namaLabel.setBounds(200, 100, 50, 20);
         this.add(namaLabel);
         
         namaText= new JTextField();
-        namaText.setBounds(100, 80, 100, 20);
+        namaText.setBounds(250, 100, 100, 20);
         this.add(namaText);
         
          namaLabel = new JLabel("Alamat");
-        namaLabel.setBounds(50, 110, 50, 20);
+        namaLabel.setBounds(200, 130, 50, 20);
         this.add(namaLabel);
         
         namaText= new JTextField();
-        namaText.setBounds(100, 110, 100, 20);
+        namaText.setBounds(250, 130, 100, 20);
         this.add(namaText);
+        
+        saveButton=new JButton("SIMPAN");
+        saveButton.setBounds(250,160,100,20);
+        this.add(saveButton);
+        
+        namaLabel = new JLabel("DAFTAR PASIEN BARU");
+        namaLabel.setBounds(240, 40, 300, 20);
+        this.add(namaLabel);
     }
-    public static void main(String[] args) {
-        DaftarAntrianDialog test = new DaftarAntrianDialog();
-        test.setSize(600, 400);
-        test.setTitle("DAFTAR PASIEN BARU");
-        test.setVisible(true);
-    }
+   
 }
