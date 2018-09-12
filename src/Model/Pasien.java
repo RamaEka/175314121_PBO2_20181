@@ -5,16 +5,40 @@
  */
 package Model;
 
+
+import java.util.ArrayList;
+
 /**
  *
  * @author RamaEka
  */
-public class Pasien {
+public final class Pasien {
+
+    public static void tambahPasienBaru(Pasien test) {
+      daftarPasienKlinik.add(test);
+   
+    }
+
+    public static Pasien cariPasien(String string) {
+        for (int i = 0; i < daftarPasienKlinik.size(); i++) {
+            if(daftarPasienKlinik.get(i).getNoRekamMedis()==string)
+                return daftarPasienKlinik.get(i);
+            
+        }return null;
+    }
+
     private String noRekamMedis,nama,alamat,tempatLahir; //deklarasi variabel bertipe data String dan bersifat private
     private int tanggalLahir,bulanLahir,tahunLahir; //deklarasi variabel bertipe data integer dan bersifat privat
-    
-      
-    public Pasien(){ //menambahkan konstruktor, Konsktruktor adalah method yang pertama kali dijalankan pada saat sebuah objek pertama kali diciptakan
+    public static ArrayList<Pasien>daftarPasienKlinik=new ArrayList<Pasien>();
+     
+    public Pasien(String nama, String alamat, String tempatLahir, int tanggalLahir, int bulanLahir, int tahunLahir, String nik){ //menambahkan konstruktor, Konsktruktor adalah method yang pertama kali dijalankan pada saat sebuah objek pertama kali diciptakan
+        setNama(nama);
+        setAlamat(alamat);
+        setTempatLahir(tempatLahir);
+        setTanggalLahir(tanggalLahir);
+        setBulanLahir(bulanLahir);
+        setTahunLahir(tahunLahir);
+        setNoRekamMedis(nik);
         
     }
     
@@ -85,4 +109,6 @@ public class Pasien {
          else{  throw new NumberFormatException("Tahun Lahir tidak vaild");}
     }
     
+  
+   
 }
