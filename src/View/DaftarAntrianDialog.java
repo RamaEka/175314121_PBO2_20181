@@ -33,31 +33,40 @@ public class DaftarAntrianDialog extends JDialog{
         this.setLayout(null);
         
         namaLabel = new JLabel("NoRM");
-        namaLabel.setBounds(200, 70, 50, 20);
+        namaLabel.setBounds(100, 70, 50, 20);
         this.add(namaLabel);
         
         namaText= new JTextField();
-        namaText.setBounds(250, 70, 150, 20);
+        namaText.setBounds(200, 70, 100, 20);
         this.add(namaText);
         
-        namaLabel = new JLabel("Nama");
-        namaLabel.setBounds(200, 100, 50, 20);
+        namaLabel = new JLabel("Tanggal Lahir");
+        namaLabel.setBounds(100, 100, 100, 20);
         this.add(namaLabel);
         
         namaText= new JTextField();
-        namaText.setBounds(250, 100, 150, 20);
+        namaText.setBounds(200, 100, 100, 20);
         this.add(namaText);
         
-         namaLabel = new JLabel("Alamat");
-        namaLabel.setBounds(200, 130, 50, 20);
+         namaLabel = new JLabel("Bulan Lahir");
+        namaLabel.setBounds(100, 130, 100, 20);
         this.add(namaLabel);
         
         namaText= new JTextField();
-        namaText.setBounds(250, 130, 150, 20);
+        namaText.setBounds(200, 130, 100, 20);
+        this.add(namaText);
+        
+         namaLabel = new JLabel("Tahun Lahir");
+        namaLabel.setBounds(100, 160, 100, 20);
+        this.add(namaLabel);
+        
+         
+        namaText= new JTextField();
+        namaText.setBounds(200, 160, 100, 20);
         this.add(namaText);
         
         saveButton=new JButton("SIMPAN");
-        saveButton.setBounds(260,160,100,20);
+        saveButton.setBounds(260,190,100,20);
         this.add(saveButton);
         
         namaLabel = new JLabel("DAFTAR PASIEN BARU");
