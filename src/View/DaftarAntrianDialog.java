@@ -60,13 +60,20 @@ public class DaftarAntrianDialog extends JDialog{
         namaLabel.setBounds(100, 160, 100, 20);
         this.add(namaLabel);
         
-         
         namaText= new JTextField();
         namaText.setBounds(200, 160, 100, 20);
         this.add(namaText);
         
+        namaLabel = new JLabel("Klinik");
+        namaLabel.setBounds(100, 190, 100, 20);
+        this.add(namaLabel);
+        
+        namaText= new JTextField();
+        namaText.setBounds(200, 190, 100, 20);
+        this.add(namaText);
+        
         saveButton=new JButton("SIMPAN");
-        saveButton.setBounds(260,190,100,20);
+        saveButton.setBounds(260,220,100,20);
         this.add(saveButton);
         
         namaLabel = new JLabel("DAFTAR PASIEN BARU");
