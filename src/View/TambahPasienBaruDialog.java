@@ -30,7 +30,7 @@ public class TambahPasienBaruDialog extends JFrame implements ActionListener {
     private JTextField namaText;
     private JButton saveButton;
     
-    private JMenuItem fileMenuItem;
+    private JMenuItem newMenuItem;
 
     public TambahPasienBaruDialog() {
         init();
@@ -45,9 +45,9 @@ public class TambahPasienBaruDialog extends JFrame implements ActionListener {
         this.setJMenuBar(MenuBar);
 
         exitMenuItem = new JMenuItem("Exit");
-        fileMenuItem = new JMenuItem("New");
+        newMenuItem = new JMenuItem("New");
 
-        fileMenu.add(fileMenuItem);
+        fileMenu.add(newMenuItem);
         fileMenu.add(exitMenuItem);
         MenuBar.add(fileMenu);
 
