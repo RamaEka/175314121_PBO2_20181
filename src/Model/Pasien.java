@@ -41,6 +41,8 @@ public final class Pasien {
         setNoRekamMedis(nik);
         
     }
+
+   
     
 
     public String getNoRekamMedis() { //membuat method bernama getNoRekamedis yang akan mereturn variabel bertipe data String
