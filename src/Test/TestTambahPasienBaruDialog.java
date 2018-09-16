@@ -5,7 +5,8 @@
  */
 package Test;
 
-import View.DaftarAntrianDialog;
+
+import View.TambahPasienBaruDialog;
 
 /**
  *
@@ -13,7 +14,7 @@ import View.DaftarAntrianDialog;
  */
 public class TestTambahPasienBaruDialog {
     public static void main(String[] args) {
-        DaftarAntrianDialog test = new DaftarAntrianDialog();
+        TambahPasienBaruDialog test = new TambahPasienBaruDialog();
         test.setSize(600, 400);
         test.setVisible(true);
     }
