@@ -22,7 +22,7 @@ public class MainFrame extends JFrame implements ActionListener {
     private JMenu fileMenu;
     private JMenuItem exitMenuItem;
     private JMenuItem tambahPasienMenuItem;
-    private JMenuItem tambahAntrianMenuItem;
+    private JMenuItem cariPasienMenuItem;
 
     public MainFrame() throws HeadlessException {
         init();
@@ -34,16 +34,16 @@ public class MainFrame extends JFrame implements ActionListener {
         fileMenu = new JMenu("File");
 
         exitMenuItem = new JMenuItem("Exit");
-        tambahPasienMenuItem = new JMenuItem("TambahPasien");
-        tambahAntrianMenuItem = new JMenuItem("TambahAntrian");
-        fileMenu.add(tambahAntrianMenuItem);
+        tambahPasienMenuItem = new JMenuItem("Tambah Pasien");
+        cariPasienMenuItem = new JMenuItem("Cari Pasien");
+        fileMenu.add(cariPasienMenuItem);
         fileMenu.add(tambahPasienMenuItem);
         fileMenu.add(exitMenuItem);
         menuBar.add(fileMenu);
 
         exitMenuItem.addActionListener(this);
         tambahPasienMenuItem.addActionListener(this);
-        tambahAntrianMenuItem.addActionListener(this);
+        cariPasienMenuItem.addActionListener(this);
         //set menuBar
         this.setJMenuBar(menuBar);
     }
