@@ -5,6 +5,9 @@
  */
 package View;
 
+import Model.Pasien;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -14,27 +17,43 @@ import javax.swing.JTextField;
  *
  * @author admin
  */
-public class DaftarAntrianDialog extends JDialog{
-    private JLabel judulLabel;
+public class DaftarAntrianDialog extends JDialog implements ActionListener {   
     private JLabel namaLabel;
+    private JLabel labelAlamat; 
+    private JLabel labelNik; 
     private JTextField namaText;
-    private JButton saveButton;
+    private JTextField alamatText;
+    private JTextField nikText;
+    private JButton tambahButton;
     
+
     public DaftarAntrianDialog() {
+        this.setTitle("Form Daftar Pasien Baru");
         init();
     }
+    
+    public void init(){
+         this.setLayout(null);
 
-    public DaftarAntrianDialog(String title) {
-        this.setTitle(title);
-        init();
-    }
-
-    public void init() {
-        this.setLayout(null);
-        
-        namaLabel = new JLabel("NoRM");
+ namaLabel = new JLabel("NoRM");
         namaLabel.setBounds(100, 70, 50, 20);
         this.add(namaLabel);
+        
+        namaLabel = new JLabel("Nama");
+        namaLabel.setBounds(320, 70, 50, 20);
+        this.add(namaLabel);
+        
+        namaText= new JTextField();
+        namaText.setBounds(370, 70, 100, 20);
+        this.add(namaText);
+        
+        namaLabel = new JLabel("Alamat");
+        namaLabel.setBounds(320, 100, 50, 20);
+        this.add(namaLabel);
+        
+        namaText= new JTextField();
+        namaText.setBounds(370, 100, 100, 20);
+        this.add(namaText);
         
         namaText= new JTextField();
         namaText.setBounds(200, 70, 100, 20);
@@ -72,13 +91,24 @@ public class DaftarAntrianDialog extends JDialog{
         namaText.setBounds(200, 190, 100, 20);
         this.add(namaText);
         
-        saveButton=new JButton("SIMPAN");
-        saveButton.setBounds(260,220,100,20);
-        this.add(saveButton);
+        tambahButton=new JButton("SIMPAN");
+        tambahButton.setBounds(260,220,100,20);
+        this.add(tambahButton);
         
         namaLabel = new JLabel("DAFTAR PASIEN BARU");
         namaLabel.setBounds(260, 40, 300, 20);
         this.add(namaLabel);
+
     }
-   
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == tambahButton) {
+                Pasien baru = new Pasien();
+                baru.setNama(namaText.getText());
+                baru.setAlamat(alamatText.getText());
+
+                Pasien.tambahPasienBaru(baru);
+    }
+}
 }
