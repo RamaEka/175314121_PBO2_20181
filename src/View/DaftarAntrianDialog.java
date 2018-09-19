@@ -22,7 +22,7 @@ public class DaftarAntrianDialog extends JDialog implements ActionListener {
     private JLabel labelAlamat; 
     private JLabel labelNik; 
     private JTextField namaText;
-    private JTextField alamatText;
+    private JTextField alamatText,tglText,blnText,tahunText,klinikText;
     private JTextField nikText;
     private JButton tambahButton;
     
@@ -51,45 +51,45 @@ public class DaftarAntrianDialog extends JDialog implements ActionListener {
         namaLabel.setBounds(320, 100, 50, 20);
         this.add(namaLabel);
         
-        namaText= new JTextField();
-        namaText.setBounds(370, 100, 100, 20);
-        this.add(namaText);
+        alamatText= new JTextField();
+        alamatText.setBounds(370, 100, 100, 20);
+        this.add(alamatText);
         
-        namaText= new JTextField();
-        namaText.setBounds(200, 70, 100, 20);
-        this.add(namaText);
+        nikText= new JTextField();
+        nikText.setBounds(200, 70, 100, 20);
+        this.add(nikText);
         
         namaLabel = new JLabel("Tanggal Lahir");
         namaLabel.setBounds(100, 100, 100, 20);
         this.add(namaLabel);
         
-        namaText= new JTextField();
-        namaText.setBounds(200, 100, 100, 20);
-        this.add(namaText);
+        tglText= new JTextField();
+        tglText.setBounds(200, 100, 100, 20);
+        this.add(tglText);
         
          namaLabel = new JLabel("Bulan Lahir");
         namaLabel.setBounds(100, 130, 100, 20);
         this.add(namaLabel);
         
-        namaText= new JTextField();
-        namaText.setBounds(200, 130, 100, 20);
-        this.add(namaText);
+        blnText= new JTextField();
+        blnText.setBounds(200, 130, 100, 20);
+        this.add(blnText);
         
          namaLabel = new JLabel("Tahun Lahir");
         namaLabel.setBounds(100, 160, 100, 20);
         this.add(namaLabel);
         
-        namaText= new JTextField();
-        namaText.setBounds(200, 160, 100, 20);
-        this.add(namaText);
+        tahunText= new JTextField();
+        tahunText.setBounds(200, 160, 100, 20);
+        this.add(tahunText);
         
         namaLabel = new JLabel("Klinik");
         namaLabel.setBounds(100, 190, 100, 20);
         this.add(namaLabel);
         
-        namaText= new JTextField();
-        namaText.setBounds(200, 190, 100, 20);
-        this.add(namaText);
+        klinikText= new JTextField();
+        klinikText.setBounds(200, 190, 100, 20);
+        this.add(klinikText);
         
         tambahButton=new JButton("SIMPAN");
         tambahButton.setBounds(260,220,100,20);
@@ -107,6 +107,7 @@ public class DaftarAntrianDialog extends JDialog implements ActionListener {
                 Pasien baru = new Pasien();
                 baru.setNama(namaText.getText());
                 baru.setAlamat(alamatText.getText());
+               
 
                 Pasien.tambahPasienBaru(baru);
     }
