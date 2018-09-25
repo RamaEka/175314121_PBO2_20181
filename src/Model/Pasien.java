@@ -123,10 +123,10 @@ this.tahunLahir=tahunLahir;}
     }
 
     public void setNik(String text) throws Exception {
-        if (text.length()== 16) {
+        if (text.length()== 6) {
             this.noRekamMedis=text;
         }else{
-            throw new Exception("NIK terdiri dari 6 digit");
+            throw new Exception("NIK harus terdiri dari 6 digit");
         }
     }
     
