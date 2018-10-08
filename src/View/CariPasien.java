@@ -80,8 +80,9 @@ public class CariPasien extends JFrame implements ActionListener  {
    public void actionPerformed(ActionEvent e) {
         try{
  if (e.getSource() == cariButton) {
-            Pasien cari =new Pasien();
-            Pasien.cariPasien(namaText.getText());
+     Pasien.cariPasien(namaText.getText());       
+     Pasien cari =new Pasien();
+            
             
                JOptionPane.showMessageDialog(null, "Nama Pasien: "+cari.getNama());
                 this.dispose();
