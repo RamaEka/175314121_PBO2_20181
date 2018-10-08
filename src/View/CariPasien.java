@@ -47,28 +47,28 @@ public class CariPasien extends JFrame implements ActionListener  {
         namaText.setBounds(130, 90, 120, 20);
         this.add(namaText);
         
-        namaLabel = new JLabel();
-        namaLabel.setText("Data yang di cari");
-        namaLabel.setBounds(50, 150, 80, 20);
-        this.add(namaLabel);
-        
-        namaLabel = new JLabel();
-        namaLabel.setText("Nama");
-        namaLabel.setBounds(50, 180, 80, 20);
-        this.add(namaLabel);
-        
-        hasilText = new JTextField();
-        hasilText.setBounds(130, 180, 120, 20);
-        this.add(hasilText);
-        
-        namaLabel = new JLabel();
-        namaLabel.setText("NIK");
-        namaLabel.setBounds(50, 210, 80, 20);
-        this.add(namaLabel);
-        
-        hasil2Text = new JTextField();
-        hasil2Text.setBounds(130, 210, 120, 20);
-        this.add(hasil2Text);
+//        namaLabel = new JLabel();
+//        namaLabel.setText("Data yang di cari");
+//        namaLabel.setBounds(50, 150, 80, 20);
+//        this.add(namaLabel);
+//        
+//        namaLabel = new JLabel();
+//        namaLabel.setText("Nama");
+//        namaLabel.setBounds(50, 180, 80, 20);
+//        this.add(namaLabel);
+//        
+//        hasilText = new JTextField();
+//        hasilText.setBounds(130, 180, 120, 20);
+//        this.add(hasilText);
+//        
+//        namaLabel = new JLabel();
+//        namaLabel.setText("NIK");
+//        namaLabel.setBounds(50, 210, 80, 20);
+//        this.add(namaLabel);
+//        
+//        hasil2Text = new JTextField();
+//        hasil2Text.setBounds(130, 210, 120, 20);
+//        this.add(hasil2Text);
         
         
        cariButton = new JButton();
