@@ -82,10 +82,7 @@ public class CariPasien extends JFrame implements ActionListener  {
  if (e.getSource() == cariButton) {
             Pasien cari =new Pasien();
             Pasien.cariPasien(namaText.getText());
-            hasilText  = new JTextField(cari.getNama());
-            this.add(hasilText);
-            hasil2Text = new JTextField(cari.getNoRekamMedis()); 
-            this.add(hasil2Text);
+            
                JOptionPane.showMessageDialog(null, "Nama Pasien: "+cari.getNama());
                 this.dispose();
                 
