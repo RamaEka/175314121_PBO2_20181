@@ -88,7 +88,7 @@ public class CariPasien extends JFrame implements ActionListener  {
                 this.dispose();
                 
         }
-        }catch(HeadlessException ex){
+        }catch(Exception ex){
            
             JOptionPane.showMessageDialog(null, ex);
         }
