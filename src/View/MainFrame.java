@@ -53,11 +53,11 @@ public class MainFrame extends JFrame implements ActionListener {
         if (e.getSource() == exitMenuItem) {
             System.exit(0);
         }
-//        if (e.getSource() == tambahAntrianMenuItem) {
-//            DaftarAntrianDialog test = new DaftarAntrianDialog();
-//            test.setSize(500, 500);
-//            test.setVisible(true);
-//        }
+        if (e.getSource() == cariPasienMenuItem) {
+            CariPasien test = new CariPasien();
+            test.setSize(500, 500);
+            test.setVisible(true);
+        }
         if (e.getSource() == tambahPasienMenuItem) {
             DaftarAntrianDialog test = new DaftarAntrianDialog();
             test.setSize(500, 500);
