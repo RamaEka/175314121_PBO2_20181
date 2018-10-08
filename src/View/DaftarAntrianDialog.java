@@ -148,8 +148,8 @@ public class DaftarAntrianDialog extends JDialog implements ActionListener {
                 baru.setBulanLahir(bulan);
                 baru.setTahunLahir(tahun);
                 Pasien.tambahPasienBaru(baru);
-                Pasien.cariPasien(nikText.getText());
-                JOptionPane.showMessageDialog(null, "Data Telah Di Tambahkan");
+
+                JOptionPane.showMessageDialog(null, "Data Telah DiTambahkan");
                 this.dispose();
         }
         }catch(Exception ex){
