@@ -5,8 +5,13 @@
  */
 package Model;
 
-
+//import com.sun.istack.internal.logging.Logger;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+//import java.util.logging.Level;
 
 /**
  *
@@ -15,23 +20,50 @@ import java.util.ArrayList;
 public final class Pasien {
 
     public static void tambahPasienBaru(Pasien test) {
-      daftarPasienKlinik.add(test);
-   
+        daftarPasienKlinik.add(test);
+
     }
 
     public static Pasien cariPasien(String string) {
         for (int i = 0; i < daftarPasienKlinik.size(); i++) {
-            if(daftarPasienKlinik.get(i).getNoRekamMedis()==string)
+            if (daftarPasienKlinik.get(i).getNoRekamMedis() == string) {
                 return daftarPasienKlinik.get(i);
-            
-        }return null;
+            }
+
+        }
+        return null;
     }
 
-    private String noRekamMedis,nama,alamat,tempatLahir; //deklarasi variabel bertipe data String dan bersifat private
-    private int tanggalLahir,bulanLahir,tahunLahir; //deklarasi variabel bertipe data integer dan bersifat privat
-    public static ArrayList<Pasien>daftarPasienKlinik=new ArrayList<Pasien>();
-     
-    public Pasien(String nama, String alamat, String tempatLahir, int tanggalLahir, int bulanLahir, int tahunLahir, String nik){ //menambahkan konstruktor, Konsktruktor adalah method yang pertama kali dijalankan pada saat sebuah objek pertama kali diciptakan
+    public static void simpanDaftarPasien(File file) {
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(file);
+            for (int i = 0; i < daftarPasienKlinik.size(); i++) {
+                String data = daftarPasienKlinik.get(i).toString();
+                fos.write(data.getBytes());
+            }
+        } catch (FileNotFoundException ex) {
+            System.out.println(ex.getMessage());
+//            Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+
+        } catch (IOException ex) {
+//            Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+System.out.println(ex.getMessage());
+        } finally {
+            try {
+                fos.close();
+
+            } catch (IOException ex) {
+//                Logger.getLogger(Pasien.class.getName()).log(Level.SEVERE, null, ex);
+System.out.println(ex.getMessage());            }
+        }
+    }
+
+    private String noRekamMedis, nama, alamat, tempatLahir; //deklarasi variabel bertipe data String dan bersifat private
+    private int tanggalLahir, bulanLahir, tahunLahir; //deklarasi variabel bertipe data integer dan bersifat privat
+    public static ArrayList<Pasien> daftarPasienKlinik = new ArrayList<Pasien>();
+
+    public Pasien(String nama, String alamat, String tempatLahir, int tanggalLahir, int bulanLahir, int tahunLahir, String nik) { //menambahkan konstruktor, Konsktruktor adalah method yang pertama kali dijalankan pada saat sebuah objek pertama kali diciptakan
         setNama(nama);
         setAlamat(alamat);
         setTempatLahir(tempatLahir);
@@ -39,26 +71,23 @@ public final class Pasien {
         setBulanLahir(bulanLahir);
         setTahunLahir(tahunLahir);
         setNoRekamMedis(nik);
-        
+
     }
 
     public Pasien() {
-        
-    }
 
-   
-    
+    }
 
     public String getNoRekamMedis() { //membuat method bernama getNoRekamedis yang akan mereturn variabel bertipe data String
         return noRekamMedis;
     }
 
     public void setNoRekamMedis(String noRekamMedis) throws NumberFormatException { //membuat method void dengan menambahkan throws NumberFormatException
-        if (noRekamMedis.toCharArray().length>=6) { //Method ini mengalokasikan array karakter baru, yang panjangnya sesuai dengan panjang string yang ditentukan
+        if (noRekamMedis.toCharArray().length >= 6) { //Method ini mengalokasikan array karakter baru, yang panjangnya sesuai dengan panjang string yang ditentukan
             this.noRekamMedis = noRekamMedis;
-        }else{
-                throw new NumberFormatException("Nomor Rekam Medis Salah"); //NumberFormatException berfungsi untuk menangani kesalahan2 dalam format penulisan angka.
-                }
+        } else {
+            throw new NumberFormatException("Nomor Rekam Medis Salah"); //NumberFormatException berfungsi untuk menangani kesalahan2 dalam format penulisan angka.
+        }
     }
 
     public String getNama() { //membuat method bernama getNama yang akan mereturn variabel bertipe data String
@@ -94,8 +123,10 @@ public final class Pasien {
 //        this.tanggalLahir = tanggalLahir;
 //        else{  throw new NumberFormatException("Tanggal Lahir tidak vaild");}
 //    }
-public void setTanggalLahir(int tanggalLahir){
-this.tanggalLahir=tanggalLahir;}
+    public void setTanggalLahir(int tanggalLahir) {
+        this.tanggalLahir = tanggalLahir;
+    }
+
     public int getBulanLahir() {  //membuat method bernama getBulanLahir yang akan mereturn variabel bertipe data integer
         return bulanLahir;
     }
@@ -105,8 +136,10 @@ this.tanggalLahir=tanggalLahir;}
 //        this.bulanLahir = bulanLahir;
 //       else{  throw new NumberFormatException("Bulan Lahir tidak vaild");}
 //    }
-public void setBulanLahir(int bulanLahir){
-this.bulanLahir=bulanLahir;}
+    public void setBulanLahir(int bulanLahir) {
+        this.bulanLahir = bulanLahir;
+    }
+
     public int getTahunLahir() {  //membuat method bernama getTahunLahir yang akan mereturn variabel bertipe data integer
         return tahunLahir;
     }
@@ -116,27 +149,30 @@ this.bulanLahir=bulanLahir;}
 //        this.tahunLahir = tahunLahir;
 //         else{  throw new NumberFormatException("Tahun Lahir tidak vaild");}
 //    }
-public void setTahunLahir(int tahunLahir){
-this.tahunLahir=tahunLahir;}
+    public void setTahunLahir(int tahunLahir) {
+        this.tahunLahir = tahunLahir;
+    }
+
     public String getRekamMedis() {
         return noRekamMedis;
     }
 
     public void setNik(String text) throws Exception {
-        if (text.length()== 6) {
-            this.noRekamMedis=text;
-        }else{
+        if (text.length() == 6) {
+            this.noRekamMedis = text;
+        } else {
             throw new Exception("NIK harus terdiri dari 6 digit");
         }
     }
-    
 
     public void setRekamMedis(String text) {
-        text=noRekamMedis;
+        text = noRekamMedis;
     }
 
-    
-    
-  
-   
+    @Override
+    public String toString() {
+
+        return nama + "\t" + alamat + "\n";
+    }
+
 }
