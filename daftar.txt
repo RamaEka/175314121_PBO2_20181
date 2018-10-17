@@ -1,2 +1,2 @@
-puspa	klaten
-adi	klaten
+001234	puspa	klaten
+002123	adi	klaten
