@@ -7,6 +7,7 @@ package Model;
 
 //import com.sun.istack.internal.logging.Logger;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -29,6 +30,7 @@ public final class Pasien {
             if (daftarPasienKlinik.get(i).getNoRekamMedis() == string) {
                 return daftarPasienKlinik.get(i);
             }
+            
 
         }
         return null;
@@ -58,6 +60,38 @@ System.out.println(ex.getMessage());
 System.out.println(ex.getMessage());            }
         }
     }
+
+     public static void bacaDaftarPasien(File file) {
+        FileInputStream fis = null;
+        String hasil = "";
+        int dataInt;
+        boolean nama = false;
+        boolean alamat = false;
+        Pasien temp = new Pasien();
+        try {
+            fis = new FileInputStream(file);
+            while ((dataInt = fis.read()) != -1) {
+                if ((char) dataInt != '\n') {
+                    if ((char) dataInt != '\t') {
+                        hasil = hasil + daftarPasienKlinik.add(temp);
+                    } else if (nama == false) {
+                        temp.setNama(hasil);
+                        nama = true;
+                        hasil = "";
+                    } else if (alamat == false) {
+                        temp.setAlamat(hasil);
+                        alamat = true;
+                        hasil = "";
+                    }
+                }
+            }
+        } catch (FileNotFoundException ex) {
+            System.out.println(ex.getMessage());
+        } catch (IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+
+}
 
     private String noRekamMedis, nama, alamat, tempatLahir; //deklarasi variabel bertipe data String dan bersifat private
     private int tanggalLahir, bulanLahir, tahunLahir; //deklarasi variabel bertipe data integer dan bersifat privat
@@ -172,7 +206,7 @@ System.out.println(ex.getMessage());            }
     @Override
     public String toString() {
 
-        return nama + "\t" + alamat + "\n";
+        return noRekamMedis+"\t"+nama + "\t" + alamat + "\n";
     }
 
 }
