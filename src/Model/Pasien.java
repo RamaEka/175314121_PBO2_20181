@@ -73,7 +73,7 @@ System.out.println(ex.getMessage());            }
             while ((dataInt = fis.read()) != -1) {
                 if ((char) dataInt != '\n') {
                     if ((char) dataInt != '\t') {
-                        hasil = hasil + daftarPasienKlinik.add(temp);
+                        hasil = hasil + (char)dataInt;
                     } else if (nama == false) {
                         temp.setNama(hasil);
                         nama = true;
@@ -86,12 +86,17 @@ System.out.println(ex.getMessage());            }
                 }
             }
         } catch (FileNotFoundException ex) {
-            System.out.println(ex.getMessage());
+             System.out.println(ex.getMessage());
+
         } catch (IOException ex) {
-            System.out.println(ex.getMessage());
+             System.out.println(ex.getMessage());
+
         }
 
-}
+    }
+     public static ArrayList<Pasien> getDaftarPasien() {
+        return daftarPasienKlinik;
+    }
 
     private String noRekamMedis, nama, alamat, tempatLahir; //deklarasi variabel bertipe data String dan bersifat private
     private int tanggalLahir, bulanLahir, tahunLahir; //deklarasi variabel bertipe data integer dan bersifat privat
