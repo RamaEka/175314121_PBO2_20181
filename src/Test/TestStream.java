@@ -27,10 +27,10 @@ public class TestStream {
         System.out.println(test.toString());
         System.out.println(test1.toString());
         
-        Pasien.tambahPasienBaru(test);
-        Pasien.tambahPasienBaru(test1);
-        
-        Pasien.simpanDaftarPasien(new File("daftar.txt"));
+//        Pasien.tambahPasienBaru(test);
+//        Pasien.tambahPasienBaru(test1);
+//        
+//        Pasien.simpanDaftarPasien(new File("daftar.txt"));
     }
 }
 

@@ -5,6 +5,8 @@
  */
 package Model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author RamaEka
@@ -12,7 +14,9 @@ package Model;
 public class Klinik {
       private String idKlinik, nama; //deklarasi variabel bertipe data String bersifat private
 
-    public String getIdKlinik() { //membuat method bernama getIdKlinik yang akan mereturn variabel bertipe data String
+      public static ArrayList<Klinik> daftarKlinik = new ArrayList<Klinik>();
+    
+      public String getIdKlinik() { //membuat method bernama getIdKlinik yang akan mereturn variabel bertipe data String
         return idKlinik;
     }
 
